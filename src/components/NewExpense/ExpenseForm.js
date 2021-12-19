@@ -41,11 +41,11 @@ const ExpenseForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-
+ 
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate),
+      date: new Date(enteredDate),  // Date will be off by 1 when in yyyy-mm-dd format
     };
 
     props.onSaveExpenseData(expenseData);
