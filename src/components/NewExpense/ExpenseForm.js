@@ -44,7 +44,7 @@ const ExpenseForm = props => {
 
 		const expenseData = {
 			title: enteredTitle,
-			amount: enteredAmount,
+			amount: +enteredAmount,
 			date: new Date(enteredDate), // Date will be off by 1 when in yyyy-mm-dd format
 		};
 
